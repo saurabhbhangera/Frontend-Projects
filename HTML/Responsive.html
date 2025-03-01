@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 25%;
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            width: 75%;
+            padding: 20px;
+            background: #ecf0f1;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .main-content {
+                width: 100%;
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        My Responsive Page
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Links and navigation items go here.</p>
+        </aside>
+
+        <section class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area where your text, images, and other elements will be displayed.</p>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Saurabh Karunakar Bhangera
+    </footer>
+
+</body>
+</html>
