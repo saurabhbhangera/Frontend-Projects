@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Tooltip</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #2c3e50;
+            text-align: center;
+            color: #f1c40f;
+            padding: 50px;
+            font-size: 20px;
+        }
+
+        /* Tooltip Container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+
+        /* Tooltip Text */
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 160px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            position: absolute;
+            bottom: 150%; /* Positions tooltip above the text */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            font-size: 14px;
+            z-index: 1;
+        }
+
+        /* Tooltip Arrow */
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        /* Show Tooltip on Hover */
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        footer {
+            background: #1a252f;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hover over the word below:</h2>
+    <p>This is a <span class="tooltip">tooltip
+        <span class="tooltip-text">I am a custom tooltip!</span>
+    </span> example.</p>
+
+    <footer>
+        © 2025 Saurabh Karunakar Bhangera
+    </footer>
+
+</body>
+</html>

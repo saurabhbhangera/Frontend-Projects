@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #2c3e50;
+            text-align: center;
+            color: #f1c40f; /* Light yellow text */
+        }
+
+        /* Parallax Section */
+        .parallax {
+            background-image: url('https://source.unsplash.com/1600x900/?nature,water'); /* Change to any image */
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Content Section */
+        .content {
+            padding: 50px;
+            background: #34495e; /* Dark gray-blue */
+            font-size: 20px;
+            color: #f1c40f; /* Light yellow */
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        /* Additional Parallax Section */
+        .parallax2 {
+            background-image: url('https://source.unsplash.com/1600x900/?mountains,sunset'); /* Another image */
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #1a252f;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="parallax">Parallax Section 1</div>
+
+    <div class="content">
+        <h2>Welcome to the Parallax Effect</h2>
+        <p>This is an example of a parallax scrolling effect, where the background image moves at a different speed than the foreground content.</p>
+    </div>
+
+    <div class="parallax2">Parallax Section 2</div>
+
+    <div class="content">
+        <h2>Multiple Layers of Parallax</h2>
+        <p>You can add multiple parallax sections to create a more immersive effect. Scroll to see the difference.</p>
+    </div>
+
+    <footer>
+        © 2025 Saurabh Karunakar Bhangera
+    </footer>
+
+</body>
+</html>
