@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Navigation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <style>
+        /* Background for the whole page */
+        body {
+            background: url('img/hero-image.jpg') no-repeat center center/cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .navbar .nav-link {
+            color: white;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f4c842;
+        }
+
+        /* Sections */
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Different Background Shades for Visibility */
+        #home { background: rgba(0, 0, 0, 0.6); }
+        #about { background: rgba(0, 0, 0, 0.7); }
+        #services { background: rgba(0, 0, 0, 0.8); }
+        #contact { background: rgba(0, 0, 0, 0.9); }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+        <p>Scroll down to explore more</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>We are dedicated to providing the best services.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <p>Explore the variety of services we offer.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for more information.</p>
+    </section>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 60, 
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

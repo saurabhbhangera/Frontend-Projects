@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Card Layout</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <style>
+        /* Full-screen background */
+        body {
+            background: url('img/hero-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card Container */
+        .card-container {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Card Hover Effect */
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Card Section inside a container -->
+    <section class="container card-container">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow">
+                    <img src="img/service1.jpg" class="card-img-top" alt="Service 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Create modern and responsive websites with the latest technologies.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow">
+                    <img src="img/service2.jpg" class="card-img-top" alt="Service 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">SEO Optimization</h5>
+                        <p class="card-text">Improve your website's ranking and visibility on search engines.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow">
+                    <img src="img/service3.jpg" class="card-img-top" alt="Service 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Expand your online presence with effective marketing strategies.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card shadow">
+                    <img src="img/service4.jpg" class="card-img-top" alt="Service 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Graphic Design</h5>
+                        <p class="card-text">Get stunning visuals and logos that represent your brand.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
