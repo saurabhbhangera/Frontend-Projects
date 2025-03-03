@@ -1,0 +1,12 @@
+var num = 42;
+var str = "Hello, TypeScript!";
+var isActive = true;
+var emptyValue = null;
+var notDefined = undefined;
+var randomValue = "Can be any type";
+console.log("Number:", num);
+console.log("String:", str);
+console.log("Boolean:", isActive);
+console.log("Null:", emptyValue);
+console.log("Undefined:", notDefined);
+console.log("Any:", randomValue);
