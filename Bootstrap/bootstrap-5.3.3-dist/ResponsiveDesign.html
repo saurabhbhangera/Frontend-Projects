@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bootstrap Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        /* Hero Section Styling */
+        .hero {
+            background: url('./img/hero-image.jpg') no-repeat center center/cover;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Our Website</h1>
+            <p class="lead">Providing the best services for you</p>
+        </div>
+    </section>
+
+    <!-- Three-Column Section -->
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h2>About Us</h2>
+                <p>We are a company dedicated to providing excellent services.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Our Services</h2>
+                <p>From web development to consulting, we offer various services.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Contact</h2>
+                <p>Email: saurabhbhangera@gmail.com</p>
+                <p>Phone: +123 456 789</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let confirmationMsg = document.getElementById("confirmation-message");
+
+            if (name === "" || email === "" || message === "") {
+                alert("All fields are required.");
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            confirmationMsg.style.display = "block";
+            document.getElementById("contact-form").reset();
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        
+        <!-- Confirmation Message -->
+        <div id="confirmation-message" class="alert alert-success text-center" style="display: none;">
+            Your message has been sent successfully!
+        </div>
+
+        <form id="contact-form" onsubmit="validateForm(event)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
